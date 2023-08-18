@@ -5,10 +5,11 @@ interface CardProps {
   Twitter: string;
   name:string;
   email:string;
+  followers:number;
 
 }
 
-const CommonCard: React.FC<CardProps> = ({ profilepic, Twitter,name,email }) => {
+const CommonCard: React.FC<CardProps> = ({ profilepic, Twitter,name,email ,followers}) => {
   const Container = styled.section`
     height: 192px;
     width: 262px;
@@ -50,7 +51,7 @@ const CommonCard: React.FC<CardProps> = ({ profilepic, Twitter,name,email }) => 
         <Text>{email}</Text>
       </Details>
       <View>
-        <p className="text-[24px] font-medium">545</p>
+        <p className="text-[24px] font-medium">{followers}</p>
         <p
           className="text-[#616D86] text-[24px]"
         >
